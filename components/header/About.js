@@ -1,19 +1,23 @@
 // Packages
 import React from "react"
-import styled from "styled-components";
+import styled from "styled-components"
 
 // Components
-import Modal, { Text } from "./Modal";
+import Modal, { Text } from "./Modal"
 import ButtonCv from "../buttons/ButtonCv"
 import * as Variables from "../styles/Variables"
 
 // Data
-import CvLinks from "../data/CvLinks";
+import CvLinks from "../data/CvLinks"
 
 // Styles
 const ButtonContainer = styled.div`
     display: flex;
     align-items: center;
+
+    @media ${Variables.Breakpoints.Mobile} {
+        flex-direction: column;
+    }
 `
 
 // Content

@@ -1,7 +1,7 @@
 // Packages
 import React from "react"
-import styled, { css } from "styled-components";
-import { ReactSVG } from "react-svg";
+import styled, { css } from "styled-components"
+import { ReactSVG } from "react-svg"
 
 // Styles
 const Container = styled(ReactSVG)`

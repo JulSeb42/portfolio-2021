@@ -1,6 +1,6 @@
 // Packages
 import React from "react"
-import styled from "styled-components";
+import styled from "styled-components"
 
 // Components
 import * as Variables from "../styles/Variables"
@@ -14,12 +14,12 @@ const Container = styled.div`
     min-height: 100vh;
     padding: calc(${Variables.Margins.XXL} * 2) 5vw;
     padding-bottom: ${Variables.Margins.XXL};
-`;
+
+    @media ${Variables.Breakpoints.Tablet} {
+        grid-template-columns: 1fr;
+    }
+`
 
 export default function List(props) {
-    return (
-        <Container count={props.count}>
-            {props.children}
-        </Container>
-    )
+    return <Container count={props.count}>{props.children}</Container>
 }

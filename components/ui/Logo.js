@@ -17,6 +17,10 @@ const Container = styled.p`
     display: grid;
     grid-template-columns: 1fr;
     gap: ${Variables.Margins.XXS};
+
+    @media ${Variables.Breakpoints.Mobile} {
+        font-size: 14px;
+    }
 `
 
 const Subtitle = styled.span`

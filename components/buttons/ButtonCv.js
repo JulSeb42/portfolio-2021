@@ -1,6 +1,6 @@
 // Packages
 import React from "react"
-import styled from "styled-components";
+import styled from "styled-components"
 import Link from "next/link"
 
 // Components
@@ -26,6 +26,20 @@ const Container = styled.a`
 
     &:first-child {
         margin-right: ${Variables.Margins.M};
+    }
+
+    @media ${Variables.Breakpoints.Tablet} {
+        font-size: 20px;
+    }
+
+    @media ${Variables.Breakpoints.Mobile} {
+        width: 100%;
+        text-align: center;
+
+        &:first-child {
+            margin-right: 0;
+            margin-bottom: ${Variables.Margins.M};
+        }
     }
 `
 

@@ -1,6 +1,6 @@
 // Packages
 import React, { useState, useEffect, useRef } from "react"
-import styled from "styled-components";
+import styled from "styled-components"
 
 // Components
 import * as Variables from "../styles/Variables"
@@ -22,14 +22,13 @@ const Container = styled.div`
 
 export default function Fade(props) {
     const [isVisible, setIsVisible] = useState(true)
-    const domRef = useRef();
+    const domRef = useRef()
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => setIsVisible(entry.isIntersecting))
         })
         observer.observe(domRef.current)
-        // return() => observer.unobserve(domRef.current)
     }, [])
 
     return (

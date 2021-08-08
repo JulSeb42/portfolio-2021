@@ -42,6 +42,7 @@ export const FontSizes = {
     TitlesL: "3vw",
     TitlesLMobile: "24px",
     TitlesM: "32px",
+    TitlesMMobile: "20px",
     TitlesS: "20px",
     Body: "16px",
     Nav: "18px",
@@ -83,6 +84,7 @@ export const Transitions = {
     Short: "all .2s ease",
     Long: "all .5s ease",
     Fade: "all 1s ease",
+    Bezier: "cubic-bezier(0.25, 0.75, 0, 0.66)",
 }
 
 // Media queries

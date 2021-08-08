@@ -15,6 +15,10 @@ const Social = styled.div`
     display: grid;
     grid-template-columns: repeat(${props => props.count}, 48px);
     gap: ${Variables.Margins.M};
+
+    @media ${Variables.Breakpoints.Mobile} {
+        grid-template-columns: repeat(4, 48px);
+    }
 `
 
 // Content
@@ -30,8 +34,13 @@ export default function Contact() {
             <Text className="Delay2">{Text2}</Text>
 
             <Social className="Delay3" count={SocialLinks.length}>
-                {SocialLinks.map((item) => (
-                    <ButtonSocial icon={item.name} color={item.color} url={item.url} key={item.id} />
+                {SocialLinks.map(item => (
+                    <ButtonSocial
+                        icon={item.name}
+                        color={item.color}
+                        url={item.url}
+                        key={item.id}
+                    />
                 ))}
             </Social>
         </Modal>

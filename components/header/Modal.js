@@ -78,6 +78,12 @@ const Close = styled(Icon)`
     opacity: 0;
     transition: ${Variables.Transitions.Long};
     transition-delay: 0s;
+
+    @media ${Variables.Breakpoints.Mobile} {
+        right: inherit;
+        left: 5vw;
+        top: ${Variables.Margins.M};
+    }
 `
 
 const Content = styled.div`
@@ -99,10 +105,18 @@ const Content = styled.div`
     position: relative;
     z-index: 1000;
     color: ${Variables.Colors.DarkGray};
+
+    @media ${Variables.Breakpoints.Tablet} {
+        width: 90%;
+    }
 `
 
 export const Text = styled.p`
     font-size: 2vw;
+
+    @media ${Variables.Breakpoints.Tablet} {
+        font-size: 28px;
+    }
 `
 
 export default function Modal(props) {
@@ -122,6 +136,9 @@ export default function Modal(props) {
                     setIsStopped(!isStopped)
                     setIsOpen(!isOpen)
                 }}
+                id={
+                    props.title === "About" ? 2 : props.title === "Contact" && 3
+                }
             >
                 {props.title}
             </ButtonMenu>

@@ -57,7 +57,12 @@ export default function LinkBehance(props) {
             >
                 {Text}
 
-                <Icon name="link" size={20} color={Variables.Colors.White} className="Icon" />
+                <Icon
+                    name="link"
+                    size={20}
+                    color={Variables.Colors.White}
+                    className="Icon"
+                />
             </Container>
         </Fade>
     )

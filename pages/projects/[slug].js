@@ -1,6 +1,3 @@
-// Packages
-import styled from "styled-components"
-
 // Components
 import Wrapper from "../../components/layouts/Wrapper"
 import Cover from "../../components/projects/Cover"
@@ -19,7 +16,6 @@ import hydrate from "next-mdx-remote/hydrate"
 import { List } from "../../components/styles/Fonts"
 import LinkBehance from "../../components/projects/LinkBehance"
 import Fade from "../../components/ui/Fade"
-
 
 // Import all components used in MDX files here
 const components = { List, LinkBehance, Section, Fade }

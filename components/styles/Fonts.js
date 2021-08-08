@@ -1,5 +1,5 @@
 // Packages
-import styled from "styled-components";
+import styled from "styled-components"
 
 // Components
 import { IconMixin } from "../ui/Icon"
@@ -65,7 +65,7 @@ export const List = styled.ul`
             ${IconMixin({
                 icon: "chevron-right",
                 size: "14px",
-                color: Variables.Colors.White
+                color: Variables.Colors.White,
             })};
             margin-top: 4px;
         }

@@ -79,16 +79,20 @@ const Content = styled.div`
     align-self: end;
 `
 
-const Title = styled.h3`
+const Title = styled.h2`
     color: ${Variables.Colors.White};
     font-weight: ${Variables.FontWeights.Bold};
     font-size: ${Variables.FontSizes.TitlesL};
+
+    @media ${Variables.Breakpoints.Mobile} {
+        font-size: ${Variables.FontSizes.TitlesLMobile};
+    }
 `
 
-const Subtitle = styled.h5`
+const Subtitle = styled.h3`
     color: ${Variables.Colors.White70};
     font-weight: ${Variables.FontWeights.Medium};
-    font-size: ${Variables.FontSizes.TitlesM};
+    font-size: ${Variables.FontSizes.TitlesMMobile};
 `
 
 export default function Card(props) {
@@ -107,6 +111,7 @@ export default function Card(props) {
                         alt={`Cover ${props.title}`}
                         height="200px"
                         width="auto"
+                        fit="contain"
                     />
 
                     <Content>

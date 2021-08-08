@@ -1,6 +1,6 @@
 // Packages
 import React from "react"
-import styled from "styled-components";
+import styled from "styled-components"
 import Link from "next/link"
 
 // Components
@@ -33,6 +33,15 @@ const Container = styled.a`
         .Icon {
             margin-left: ${Variables.Margins.XS};
         }
+
+        @media ${Variables.Breakpoints.Tablet} {
+            background-color: ${Variables.Colors.DarkBlue};
+        }
+    }
+
+    @media ${Variables.Breakpoints.Tablet} {
+        font-size: 24px;
+        height: 200px;
     }
 `
 
@@ -45,7 +54,12 @@ export default function Next(props) {
             <Container>
                 {Text}
 
-                <Icon name="arrow-right" color={Variables.Colors.White} size={24} className="Icon" />
+                <Icon
+                    name="arrow-right"
+                    color={Variables.Colors.White}
+                    size={24}
+                    className="Icon"
+                />
             </Container>
         </Link>
     )

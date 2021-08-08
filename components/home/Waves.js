@@ -63,7 +63,7 @@ const Squares = styled.img`
     width: 400px;
     left: 110px;
     top: 120px;
-    opacity: .7;
+    opacity: 0.7;
 `
 
 const Circles = styled.img`

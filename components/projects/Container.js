@@ -17,6 +17,15 @@ const Wrapper = styled.main`
     & > * {
         grid-column: ${Variables.Container.Column};
     }
+
+    @media ${Variables.Breakpoints.Tablet} {
+        grid-template-columns: ${Variables.Container.TemplateTablet};
+        padding: ${Variables.Container.PaddingTablet};
+
+        & > * {
+            grid-column: ${Variables.Container.ColumnTablet};
+        }
+    }
 `
 
 const Content = styled.div`

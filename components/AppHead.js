@@ -1,7 +1,6 @@
 // Packages
 import React from "react"
 import Head from "next/head"
-import Router from "next/router"
 
 // Data
 import SiteData from "./data/SiteData"

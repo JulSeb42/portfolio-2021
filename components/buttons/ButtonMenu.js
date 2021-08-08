@@ -1,6 +1,6 @@
 // Packages
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import Link from "next/link"
 
 // Components
@@ -27,22 +27,45 @@ const Container = styled.button`
         box-shadow: ${Variables.Shadows.Button};
         transform: translateY(-${Variables.Margins.XXS}) scale(1.05);
     }
+
+    @media ${Variables.Breakpoints.Mobile} {
+        ${props =>
+            props.headerLinks &&
+            css`
+                font-size: 32px;
+                background-color: ${Variables.Colors.White70};
+                color: ${Variables.Colors.DarkGray};
+                border-color: ${Variables.Colors.White};
+                box-shadow: ${Variables.Shadows.Button};
+                width: 70%;
+                text-align: center;
+                font-weight: ${Variables.FontWeights.Medium};
+
+                &.ButtonDelay1 {
+                    transition-delay: 0.6s;
+                }
+
+                &.ButtonDelay2 {
+                    transition-delay: 0.8s;
+                }
+
+                &.ButtonDelay3 {
+                    transition-delay: 1s;
+                }
+            `}
+    }
 `
 
 export default function ButtonMenu(props) {
     return props.href ? (
         <Link href={props.href} passHref>
-            <Container as="a">{props.children}</Container>
+            <Container as="a" className={`ButtonDelay${props.id}`} headerLinks>
+                {props.children}
+            </Container>
         </Link>
-    ) : props.social ? (
-        <Container
-            as="a"
-            target={props.children !== "email" && "_blank"}
-            href={props.href}
-        >
+    ) : (
+        <Container className={`ButtonDelay${props.id}`} {...props} headerLinks>
             {props.children}
         </Container>
-    ) : (
-        <Container {...props}>{props.children}</Container>
     )
 }
