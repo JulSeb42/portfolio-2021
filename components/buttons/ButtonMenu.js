@@ -29,14 +29,8 @@ const Container = styled.button`
     }
 
     @media ${Variables.Breakpoints.Mobile} {
-        ${props =>
-            props.headerLinks &&
-            css`
+
                 font-size: 32px;
-                background-color: ${Variables.Colors.White70};
-                color: ${Variables.Colors.DarkGray};
-                border-color: ${Variables.Colors.White};
-                box-shadow: ${Variables.Shadows.Button};
                 width: 70%;
                 text-align: center;
                 font-weight: ${Variables.FontWeights.Medium};
@@ -52,7 +46,7 @@ const Container = styled.button`
                 &.ButtonDelay3 {
                     transition-delay: 1s;
                 }
-            `}
+        
     }
 `
 
