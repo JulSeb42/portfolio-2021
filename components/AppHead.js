@@ -23,6 +23,22 @@ export default function AppHead(props) {
 
     return (
         <Head>
+            <script
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=UA-171443082-1"
+            />
+
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'UA-171443082-1', { page_path: window.location.pathname });
+                    `,
+                }}
+            />
+
             <title>
                 {props.title} | {SiteData.Title}
             </title>

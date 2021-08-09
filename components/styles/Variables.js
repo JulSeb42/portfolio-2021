@@ -1,6 +1,6 @@
 // Colors
 export const Colors = {
-    Background: "#001429",
+    Background: "#0A0A0A",
     Border: "#333",
     White: "#FFF",
     White70: "rgba(255, 255, 255, 0.7)",
@@ -8,7 +8,7 @@ export const Colors = {
     White5: "rgba(255, 255, 255, 0.05)",
     Black: "#0A0B08",
     DarkGray: "#333",
-    DarkBlue: "#002952",
+    DarkBlue: "#001429",
 }
 
 // Shadows
