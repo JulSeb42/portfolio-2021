@@ -27,6 +27,7 @@ export default function Posts({ source, frontMatter }) {
             title={frontMatter.title}
             description={frontMatter.description}
             keywords={frontMatter.keywords}
+            cover={frontMatter.cover}
         >
             <Cover
                 title={frontMatter.title}

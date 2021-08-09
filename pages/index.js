@@ -12,7 +12,11 @@ import { getSortedPosts } from "../lib/posts"
 
 export default function Home({ allPostsData }) {
     return (
-        <Wrapper title="Home" description="" keywords="">
+        <Wrapper
+            title="Home"
+            description="Homepage of Julien Sebag's portfolio, UX / UI / Web Designer based in Warsaw, Poland."
+            keywords="ux, ui, design, front end, designer, portfolio, warsaw"
+        >
             <Waves />
 
             <List count={allPostsData.length / 2}>
