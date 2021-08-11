@@ -10,7 +10,7 @@ import Picture from "../ui/Picture"
 // Styles
 const Open = keyframes`
     from {
-        transform: translateY(-${Variables.Margins.S});
+        transform: translateX(-${Variables.Margins.S});
         opacity: 0;
     }
 
@@ -21,16 +21,12 @@ const Open = keyframes`
 `
 
 const Wrapper = styled.div`
-    background-color: ${Variables.Colors.White20};
-    backdrop-filter: blur(20px);
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+    // overflow: hidden;
+    z-index: 1;
     border-radius: ${Variables.Radiuses.XL};
-    border: 1px solid ${Variables.Colors.White70};
-    transition: ${Variables.Transitions.Short};
-
-    &:hover {
-        transform: translateY(-${Variables.Margins.XS}) scale(1.02);
-        box-shadow: ${Variables.Shadows.Modal};
-    }
 
     &.Loading {
         animation: ${Open};
@@ -54,33 +50,134 @@ const Wrapper = styled.div`
         &:nth-child(4) {
             animation-delay: 0.8s;
         }
+
+        &:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        &:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+    }
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        border-radius: ${Variables.Radiuses.XL};
+    }
+
+    &:first-child:before {
+        background-image: linear-gradient(currentColor 1px, transparent 1px),
+            linear-gradient(to right, currentColor 1px, transparent 1px);
+        background-size: 50px 50px;
+        color: ${Variables.Colors.White};
+    }
+
+    &:nth-child(2):before {
+        background-image: radial-gradient(currentColor 1px, transparent 1px);
+        background-size: calc(10 * 1px) calc(10 * 1px);
+        color: ${Variables.Colors.Red};
+    }
+
+    &:nth-child(3):before {
+        background-image: radial-gradient(currentColor 2px, transparent 2px),
+            radial-gradient(currentColor 2px, transparent 2px);
+        background-size: calc(20 * 2px) calc(20 * 2px);
+        background-position: 0 0, calc(10 * 2px) calc(10 * 2px);
+        color: ${Variables.Colors.Green};
+    }
+
+    &:nth-child(4):before {
+        background-image: repeating-linear-gradient(
+            to right,
+            currentColor,
+            currentColor 1px,
+            transparent 1px,
+            transparent
+        );
+        background-size: 10px 10px;
+        color: ${Variables.Colors.Orange};
+    }
+
+    &:nth-child(5):before {
+        background-image: repeating-linear-gradient(
+            45deg,
+            currentColor 0,
+            currentColor 1px,
+            transparent 0,
+            transparent 50%
+        );
+        background-size: 10px 10px;
+        color: ${Variables.Colors.Blue};
+    }
+
+    &:nth-child(6):before {
+        background: linear-gradient(135deg, currentColor 25%, transparent 25%) -25px
+                0,
+            linear-gradient(225deg, currentColor 25%, transparent 25%) -25px 0,
+            linear-gradient(315deg, currentColor 25%, transparent 25%),
+            linear-gradient(45deg, currentColor 25%, transparent 25%);
+        background-size: calc(2 * 25px) calc(2 * 25px);
+        color: ${Variables.Colors.Yellow};
     }
 `
 
 const Container = styled.a`
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: ${Variables.Margins.L};
+    color: ${Variables.Colors.White};
+    text-decoration: none;
+    position: relative;
     width: 100%;
     height: 100%;
-    padding: ${Variables.Margins.L};
-    text-decoration: none;
+    display: block;
+
+    background-color: ${Variables.Colors.Background};
+    border: 1px solid ${Variables.Colors.White};
+    border-radius: ${Variables.Radiuses.XL};
+    transition: ${Variables.Transitions.Short};
+    overflow: hidden;
+
+    &:hover {
+        transform: translate(-${Variables.Margins.L}, -${Variables.Margins.L});
+    }
 `
 
 const PictureStyled = styled(Picture)`
-    justify-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -50%;
+    z-index: 1;
+    padding: ${Variables.Margins.L} 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 `
 
 const Content = styled.div`
-    align-self: end;
+    position: relative;
+    z-index: 2;
+    padding: ${Variables.Margins.L};
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+    background-color: ${Variables.Colors.White5};
+    backdrop-filter: blur(5px);
+    border-radius: ${Variables.Radiuses.XL};
+    overflow: hidden;
 `
 
 const Title = styled.h2`
-    color: ${Variables.Colors.White};
     font-weight: ${Variables.FontWeights.Bold};
     font-size: ${Variables.FontSizes.TitlesL};
 
@@ -109,9 +206,6 @@ export default function Card(props) {
                         medium={`/covers/m-cover-${props.cover}.png`}
                         large={`/covers/l-cover-${props.cover}.png`}
                         alt={`Cover ${props.title}`}
-                        height="200px"
-                        width="auto"
-                        fit="contain"
                     />
 
                     <Content>

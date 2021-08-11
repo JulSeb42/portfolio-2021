@@ -17,7 +17,7 @@ export default function Home({ allPostsData }) {
             description="Homepage of Julien Sebag's portfolio, UX / UI / Web Designer based in Warsaw, Poland."
             keywords="ux, ui, design, front end, designer, portfolio, warsaw"
         >
-            <Waves />
+            {/* <Waves /> */}
 
             <List count={allPostsData.length / 2}>
                 {allPostsData.map(({ slug, title, position, cover }) => (

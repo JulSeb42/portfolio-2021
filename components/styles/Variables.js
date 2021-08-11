@@ -9,6 +9,13 @@ export const Colors = {
     Black: "#0A0B08",
     DarkGray: "#333",
     DarkBlue: "#001429",
+
+    // Backgrounds home
+    Red: "#ED1C24",
+    Orange: "#C44900",
+    Green: "#139A43",
+    Yellow: "#E6E49f",
+    Blue: "#279Af1",
 }
 
 // Shadows

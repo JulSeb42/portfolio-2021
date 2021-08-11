@@ -1,11 +1,12 @@
 // Packages
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 // Components
 import { H3, H4, Small } from "../styles/Fonts"
 import * as Variables from "../styles/Variables"
 import Fade from "../ui/Fade"
+import Picture from "../ui/Picture"
 
 // Styles
 const Container = styled.section`
@@ -23,6 +24,25 @@ const ImgContainer = styled.div`
 const Video = styled.iframe`
     width: 100%;
     aspect-ratio: 16/9;
+`
+
+const Img = styled(Picture)`
+    // width: 100%;
+    // height: auto;
+    display: block;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    ${props =>
+        props.background &&
+        css`
+            background-color: ${Variables.Colors.White70};
+            padding: ${Variables.Margins.S};
+            border-radius: ${Variables.Radiuses.XL};
+        `}
 `
 
 // Content
@@ -53,7 +73,14 @@ export default function Section(props) {
                                 target="_blank"
                                 rel="noreferrer noopener"
                             >
-                                <img src={props.img} alt={props.alt} />
+                                <Img
+                                    small={`/images/s-${props.img}`}
+                                    medium={`/images/m-${props.img}`}
+                                    large={`/images/l-${props.img}`}
+                                    alt={props.alt}
+                                    background={props.background}
+                                    fit="contain"
+                                />
                             </a>
                         </Fade>
 
@@ -63,7 +90,14 @@ export default function Section(props) {
                     </ImgContainer>
                 ) : (
                     <Fade>
-                        <img src={props.img} alt={props.alt} />
+                        <Img
+                            small={`/images/s-${props.img}`}
+                            medium={`/images/m-${props.img}`}
+                            large={`/images/l-${props.img}`}
+                            alt={props.alt}
+                            background={props.background}
+                            fit="contain"
+                        />
                     </Fade>
                 ))}
 
