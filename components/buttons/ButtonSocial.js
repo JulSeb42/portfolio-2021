@@ -22,6 +22,13 @@ const Container = styled.a`
         box-shadow: ${Variables.Shadows.Button};
         transform: scale(1.05) translateY(-${Variables.Margins.XXS});
     }
+
+    @media (hover: none) and (pointer: coarse) {
+        &:hover {
+            box-shadow: none;
+            transform: scale(1) translateY(0);
+        }
+    }
 `
 
 export default function ButtonSocial(props) {

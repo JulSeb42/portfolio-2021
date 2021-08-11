@@ -14,7 +14,6 @@ const Container = styled.a`
     text-decoration: none;
     font-weight: ${Variables.FontWeights.Medium};
     padding: ${Variables.Margins.XXS} ${Variables.Margins.XS};
-    // background: red;
     display: inline-flex;
     align-items: center;
     width: auto;
@@ -40,6 +39,20 @@ const Container = styled.a`
 
         .Icon svg path {
             fill: ${Variables.Colors.DarkGray};
+        }
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+        &:hover {
+            background-color: transparent;
+            color: ${Variables.Colors.White};
+            border-color: transparent;
+            transform: scale(1) translateY(0)
+                translateX(-${Variables.Margins.XS});
+
+            .Icon svg path {
+                fill: ${Variables.Colors.White};
+            }
         }
     }
 `

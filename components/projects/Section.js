@@ -27,8 +27,6 @@ const Video = styled.iframe`
 `
 
 const Img = styled(Picture)`
-    // width: 100%;
-    // height: auto;
     display: block;
 
     img {

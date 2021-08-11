@@ -28,25 +28,34 @@ const Container = styled.button`
         transform: translateY(-${Variables.Margins.XXS}) scale(1.05);
     }
 
+    @media (hover: none) and (pointer: coarse) {
+        &:hover {
+            background-color: transparent;
+            color: ${Variables.Colors.White};
+            backdrop-filter: blur(0);
+            border-color: transparent;
+            box-shadow: none;
+            transform: translateY(0) scale(1);
+        }
+    }
+
     @media ${Variables.Breakpoints.Mobile} {
+        font-size: 32px;
+        width: 70%;
+        text-align: center;
+        font-weight: ${Variables.FontWeights.Medium};
 
-                font-size: 32px;
-                width: 70%;
-                text-align: center;
-                font-weight: ${Variables.FontWeights.Medium};
+        &.ButtonDelay1 {
+            transition-delay: 0.6s;
+        }
 
-                &.ButtonDelay1 {
-                    transition-delay: 0.6s;
-                }
+        &.ButtonDelay2 {
+            transition-delay: 0.8s;
+        }
 
-                &.ButtonDelay2 {
-                    transition-delay: 0.8s;
-                }
-
-                &.ButtonDelay3 {
-                    transition-delay: 1s;
-                }
-        
+        &.ButtonDelay3 {
+            transition-delay: 1s;
+        }
     }
 `
 

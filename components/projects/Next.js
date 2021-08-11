@@ -33,15 +33,21 @@ const Container = styled.a`
         .Icon {
             margin-left: ${Variables.Margins.XS};
         }
-
-        @media ${Variables.Breakpoints.Tablet} {
-            background-color: ${Variables.Colors.DarkBlue};
-        }
     }
 
     @media ${Variables.Breakpoints.Tablet} {
         font-size: 24px;
         height: 200px;
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+        &:hover {
+            background-color: ${Variables.Colors.DarkBlue};
+
+            .Icon {
+                margin-left: ${Variables.Margins.XXS};
+            }
+        }
     }
 `
 

@@ -24,7 +24,6 @@ const Wrapper = styled.div`
     width: 100%;
     aspect-ratio: 1;
     position: relative;
-    // overflow: hidden;
     z-index: 1;
     border-radius: ${Variables.Radiuses.XL};
 
@@ -143,6 +142,24 @@ const Container = styled.a`
 
     &:hover {
         transform: translate(-${Variables.Margins.L}, -${Variables.Margins.L});
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+        transform: translate(-${Variables.Margins.M}, -${Variables.Margins.M});
+
+        &:hover {
+            transform: translate(
+                -${Variables.Margins.M},
+                -${Variables.Margins.M}
+            );
+        }
+
+        @media ${Variables.Breakpoints.Mobile} {
+            transform: translate(
+                -${Variables.Margins.S},
+                -${Variables.Margins.S}
+            );
+        }
     }
 `
 

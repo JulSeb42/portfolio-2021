@@ -83,7 +83,7 @@ export const Container = {
 
     TemplateTablet: "1fr",
     ColumnTablet: 1,
-    PaddingTablet: `${Margins.XXL} 5vw`,
+    PaddingTablet: `${Margins.XXL} 10vw`,
 }
 
 // Transitions

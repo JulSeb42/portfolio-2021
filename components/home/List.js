@@ -16,6 +16,10 @@ const Container = styled.div`
     padding-bottom: ${Variables.Margins.XXL};
 
     @media ${Variables.Breakpoints.Tablet} {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media ${Variables.Breakpoints.Mobile} {
         grid-template-columns: 1fr;
     }
 `

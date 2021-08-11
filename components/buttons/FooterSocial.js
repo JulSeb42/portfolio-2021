@@ -27,6 +27,21 @@ const Container = styled.button`
         box-shadow: ${Variables.Shadows.Button};
         transform: translateY(-${Variables.Margins.XXS}) scale(1.05);
     }
+
+    @media (hover: none) and (pointer: coarse) {
+        &:hover {
+            background-color: transparent;
+            color: ${Variables.Colors.White};
+            backdrop-filter: blur(0);
+            border-color: transparent;
+            box-shadow: none;
+            transform: translateY(0}) scale(1);
+        }
+    }
+
+    @media ${Variables.Breakpoints.Mobile} {
+        font-size: 14px;
+    }
 `
 
 export default function FooterSocial(props) {

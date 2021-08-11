@@ -41,6 +41,14 @@ const Container = styled.a`
             margin-bottom: ${Variables.Margins.M};
         }
     }
+
+    @media (hover: none) and (pointer: coarse) {
+        &:hover {
+            box-shadow: none;
+            transform: scale(1) translateY(0);
+            border-color: transparent;
+        }
+    }
 `
 
 // Content

@@ -33,7 +33,11 @@ const Copy = styled.p`
     font-size: ${Variables.FontSizes.Nav};
 
     @media ${Variables.Breakpoints.Tablet} {
-        margin-top: ${Variables.Margins.XS};
+        margin-top: ${Variables.Margins.L};
+    }
+
+    @media ${Variables.Breakpoints.Mobile} {
+        font-size: 14px;
     }
 `
 
