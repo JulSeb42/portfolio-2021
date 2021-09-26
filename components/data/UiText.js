@@ -3,7 +3,7 @@ import SiteData from "./SiteData"
 
 const UiTexts = {
     ButtonCv: "Check my CV",
-    CopyFooter: `&copy; ${SiteData.Author} | ${SiteData.Year}`,
+    CopyFooter: `© ${SiteData.Author} | ${SiteData.Year}`,
 
     // About
     About1: "Hi I'm Julien, a French UX / UI / Web Designer based in Warsaw, Poland.",
