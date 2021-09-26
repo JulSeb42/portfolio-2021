@@ -9,6 +9,7 @@ import * as Variables from "../styles/Variables"
 
 // Data
 import SocialLinks from "../data/SocialLinks"
+import UiTexts from "../data/UiText"
 
 // Styles
 const Social = styled.div`
@@ -21,17 +22,11 @@ const Social = styled.div`
     }
 `
 
-// Content
-const Text1 =
-    "You like what you see and want to work with me, have a coffee or just have a chat?"
-const Text2 =
-    "At the moment, I’m based in Warsaw, Poland. You can contact me anytime via any social network or by email!"
-
 export default function Contact() {
     return (
         <Modal title="Contact">
-            <Text className="Delay1">{Text1}</Text>
-            <Text className="Delay2">{Text2}</Text>
+            <Text className="Delay1">{UiTexts.Contact1}</Text>
+            <Text className="Delay2">{UiTexts.Contact2}</Text>
 
             <Social className="Delay3" count={SocialLinks.length}>
                 {SocialLinks.map(item => (

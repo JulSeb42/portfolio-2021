@@ -1,5 +1,6 @@
 // Packages
 import React from "react"
+import Link from "next/link"
 import styled from "styled-components"
 
 // Components
@@ -9,7 +10,7 @@ import * as Variables from "../styles/Variables"
 import SiteData from "../data/SiteData"
 
 // Styles
-const Container = styled.p`
+const Container = styled.a`
     color: ${Variables.Colors.White};
     text-decoration: none;
     font-size: ${Variables.FontSizes.Nav};
@@ -29,9 +30,11 @@ const Subtitle = styled.span`
 
 export default function Logo() {
     return (
-        <Container>
-            {SiteData.Author}
-            <Subtitle>{SiteData.Subtitle}</Subtitle>
-        </Container>
+        <Link href="/" passHref>
+            <Container>
+                {SiteData.Author}
+                <Subtitle>{SiteData.Subtitle}</Subtitle>
+            </Container>
+        </Link>
     )
 }

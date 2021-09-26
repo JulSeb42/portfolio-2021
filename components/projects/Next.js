@@ -7,6 +7,9 @@ import Link from "next/link"
 import * as Variables from "../styles/Variables"
 import Icon from "../ui/Icon"
 
+// Content
+import UiTexts from "../data/UiText"
+
 // Styles
 const Container = styled.a`
     width: 100%;
@@ -51,14 +54,11 @@ const Container = styled.a`
     }
 `
 
-// Content
-const Text = "Next project"
-
 export default function Next(props) {
     return (
         <Link href={props.href} passHref>
             <Container>
-                {Text}
+                {UiTexts.NextProject}
 
                 <Icon
                     name="arrow-right"

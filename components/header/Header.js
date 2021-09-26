@@ -24,10 +24,6 @@ const Container = styled.header`
     padding: ${Variables.Margins.M} 5vw;
 `
 
-const LogoContainer = styled.a`
-    text-decoration: none;
-`
-
 const Nav = styled.nav`
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -134,11 +130,7 @@ export default function Header() {
 
     return (
         <Container>
-            <Link href="/" passHref>
-                <LogoContainer>
-                    <Logo />
-                </LogoContainer>
-            </Link>
+            <Logo />
 
             <Burger
                 onClick={() => {

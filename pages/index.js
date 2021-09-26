@@ -1,24 +1,37 @@
 // Packages
 import React from "react"
+import styled from "styled-components"
 
 // Components
 import Wrapper from "../components/layouts/Wrapper"
-import Waves from "../components/home/Waves"
 import List from "../components/home/List"
 import Card from "../components/home/Card"
+
+// Content
+import UiTexts from "../components/data/UiText"
+import SiteData from "../components/data/SiteData"
 
 // Blog
 import { getSortedPosts } from "../lib/posts"
 
+// Styles
+const Hidden = styled.h1`
+    position: fixed;
+    top: -999em;
+    left: -999em;
+`
+
 export default function Home({ allPostsData }) {
     return (
         <Wrapper
-            title="Home"
-            description="Homepage of Julien Sebag's portfolio, UX / UI / Web Designer based in Warsaw, Poland."
-            keywords="ux, ui, design, front end, designer, portfolio, warsaw"
+            title={UiTexts.TitleHome}
+            description={UiTexts.DescHome}
+            keywords={UiTexts.KeywordsHome}
         >
-            {/* <Waves /> */}
-
+            <Hidden>
+                {SiteData.Title} | {UiTexts.TitleHome}
+            </Hidden>
+            
             <List count={allPostsData.length / 2}>
                 {allPostsData.map(({ slug, title, position, cover }) => (
                     <Card

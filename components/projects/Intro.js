@@ -7,6 +7,9 @@ import * as Variables from "../styles/Variables"
 import { H4, P } from "../styles/Fonts"
 import Fade from "../ui/Fade"
 
+// Content
+import UiTexts from "../data/UiText"
+
 // Styles
 const Container = styled.section`
     display: grid;
@@ -35,15 +38,14 @@ const Skills = styled.ul`
 `
 
 // Content
-const TitleSkills = "Skills"
-const TitleDates = "Dates"
+
 
 export default function Intro(props) {
     return (
         <Container>
             <Col>
                 <Fade>
-                    <H4>{TitleSkills}</H4>
+                    <H4>{UiTexts.TitleSkills}</H4>
                 </Fade>
 
                 <Skills>
@@ -57,7 +59,7 @@ export default function Intro(props) {
 
             <Col>
                 <Fade>
-                    <H4>{TitleDates}</H4>
+                    <H4>{UiTexts.TitleDates}</H4>
                 </Fade>
 
                 <Fade>

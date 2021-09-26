@@ -8,6 +8,9 @@ import * as Variables from "../styles/Variables"
 import Fade from "../ui/Fade"
 import Picture from "../ui/Picture"
 
+// Content
+import UiTexts from "../data/UiText"
+
 // Styles
 const Container = styled.section`
     display: grid;
@@ -42,9 +45,6 @@ const Img = styled(Picture)`
             border-radius: ${Variables.Radiuses.XL};
         `}
 `
-
-// Content
-const TextVisit = "Click on image to visit."
 
 export default function Section(props) {
     return (
@@ -83,7 +83,7 @@ export default function Section(props) {
                         </Fade>
 
                         <Small>
-                            <Fade>{TextVisit}</Fade>
+                            <Fade>{UiTexts.TextVisit}</Fade>
                         </Small>
                     </ImgContainer>
                 ) : (

@@ -7,6 +7,9 @@ import Icon from "../ui/Icon"
 import * as Variables from "../styles/Variables"
 import Fade from "../ui/Fade"
 
+// Content
+import UiTexts from "../data/UiText"
+
 // Styles
 const Container = styled.a`
     font-size: ${Variables.FontSizes.Nav};
@@ -57,9 +60,6 @@ const Container = styled.a`
     }
 `
 
-// Content
-const Text = "See the full project on Behance"
-
 export default function LinkBehance(props) {
     return (
         <Fade>
@@ -68,7 +68,7 @@ export default function LinkBehance(props) {
                 target="_blank"
                 rel="noreferrer noopener"
             >
-                {Text}
+                {UiTexts.LinkBehance}
 
                 <Icon
                     name="link"

@@ -6,6 +6,9 @@ import Link from "next/link"
 // Components
 import * as Variables from "../styles/Variables"
 
+// UI Texts
+import UiTexts from "../data/UiText"
+
 // Styles
 const Container = styled.a`
     color: ${Variables.Colors.Black};
@@ -51,14 +54,11 @@ const Container = styled.a`
     }
 `
 
-// Content
-const Text = "Check my CV"
-
 export default function ButtonCv(props) {
     return (
         <Link href={props.href} passHref>
             <Container target="_blank" rel="noreferrer noopener">
-                {Text} ({props.lang.toUpperCase()})
+                {UiTexts.ButtonCv} ({props.lang.toUpperCase()})
             </Container>
         </Link>
     )

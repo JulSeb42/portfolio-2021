@@ -7,7 +7,7 @@ import * as Variables from "../styles/Variables"
 import Social from "./Social"
 
 // Data
-import SiteData from "../data/SiteData"
+import UiTexts from "../data/UiText"
 
 // Styles
 const Container = styled.footer`
@@ -47,7 +47,7 @@ export default function Footer() {
             <Social />
 
             <Copy>
-                &copy; {SiteData.Author} | {SiteData.Year}
+                {UiTexts.CopyFooter}
             </Copy>
         </Container>
     )
