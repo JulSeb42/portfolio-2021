@@ -80,8 +80,6 @@ const Close = styled(Icon)`
     transition-delay: 0s;
 
     @media ${Variables.Breakpoints.Mobile} {
-        right: inherit;
-        left: 5vw;
         top: ${Variables.Margins.M};
     }
 `
