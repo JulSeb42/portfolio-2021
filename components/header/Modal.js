@@ -127,6 +127,7 @@ export default function Modal(props) {
 
     useEffect(() => {
         document.body.classList.toggle("stop-scrolling", isStopped)
+        document.querySelector("#burger").classList.toggle("hidden", isStopped)
     }, [isStopped])
 
     return (

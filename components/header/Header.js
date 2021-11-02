@@ -138,6 +138,7 @@ export default function Header() {
                     setIsBurgerOpen(!isBurgerOpen)
                 }}
                 className={BurgerOpen}
+                id="burger"
             >
                 <span />
                 <span />
