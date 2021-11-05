@@ -71,13 +71,16 @@ const Nav = styled.nav`
     }
 `
 
-const Burger = styled.div`
+const Burger = styled.button`
     width: 30px;
     height: 20px;
     position: relative;
     cursor: pointer;
     z-index: 998;
     display: none;
+    background: none;
+    border: none;
+    padding: 0;
 
     span {
         width: 100%;
@@ -139,6 +142,8 @@ export default function Header() {
                 }}
                 className={BurgerOpen}
                 id="burger"
+                aria-label="Menu"
+                aria-expanded="false"
             >
                 <span />
                 <span />
