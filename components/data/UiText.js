@@ -6,8 +6,8 @@ const UiTexts = {
     CopyFooter: `© ${SiteData.Author} | ${SiteData.Year}`,
 
     // About
-    About1: "Hi I'm Julien, a French UX / UI / Web Designer based in Warsaw, Poland.",
-    About2: "Currently working as a Product Designer at Nielsen, I create cool interfaces, code websites, and usually drink tea.",
+    About1: "Hi I'm Julien, a French UX Engineer based in Berlin, Germany.",
+    About2: "Currently studying Web Development at Ironhack and formerly Product Designer at Nielsen, I create cool interfaces, code websites, and usually drink tea.",
 
     // Contact
     Contact1:
@@ -18,8 +18,8 @@ const UiTexts = {
     // Homepage
     TitleHome: "Home",
     DescHome:
-        "Homepage of Julien Sebag's portfolio, UX / UI / Web Designer based in Warsaw, Poland.",
-    KeywordsHome: "ux, ui, design, front end, designer, portfolio, warsaw",
+        "Homepage of Julien Sebag's portfolio, UX / UI / Web Designer based in Berlin, Germany.",
+    KeywordsHome: "ux, ui, design, front end, designer, portfolio, berlin",
 
     // Projects
     TitleSkills: "Skills",
