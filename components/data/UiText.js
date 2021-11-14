@@ -13,7 +13,7 @@ const UiTexts = {
     Contact1:
         "You like what you see and want to work with me, have a coffee or just have a chat?",
     Contact2:
-        "At the moment, I’m based in Warsaw, Poland. You can contact me anytime via any social network or by email!",
+        "At the moment, I’m based in Berlin, Germany. You can contact me anytime via any social network or by email!",
 
     // Homepage
     TitleHome: "Home",
